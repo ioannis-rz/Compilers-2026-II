@@ -86,7 +86,8 @@ ClassTable::ClassTable(Classes classes) : semant_errors(0), error_stream(cerr) {
 }
 
 void ClassTable::install_basic_classes() {
-    curr_lineno = 0;
+    // The tree package uses these globals to annotate the classes built below.
+    // curr_lineno = 0;
     Symbol filename = stringtable.add_string("<basic class>");
 
     // Clases básicas de COOL: Object, IO, Int, Bool, String
